@@ -1,0 +1,10 @@
+<div class="page">
+    <div class="header">
+        <app-input label="Filter by name" [formControl]="formControl"></app-input>
+    </div>
+
+    <div class="grid-users" *ngIf="users$ | async as users">
+        <app-user-card [user]="user" *ngFor="let user of users">
+        </app-user-card>
+    </div>
+</div>
